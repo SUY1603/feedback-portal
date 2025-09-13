@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Campus Feedback Portal</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>Campus Feedback Portal</h1>
+    <p>Share your feedback to help improve college facilities</p>
+  </header>
+
+  <main>
+    <!-- Feedback Form -->
+    <section class="form-section">
+      <h2>Submit Your Feedback</h2>
+      <form id="feedbackForm">
+        <label for="category">Category:</label>
+        <select id="category" required aria-label="Feedback category">
+          <option value="">-- Select --</option>
+          <option>Hostel</option>
+          <option>Wi-Fi</option>
+          <option>Library</option>
+          <option>Classroom</option>
+          <option>Other</option>
+        </select>
+
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" rows="4" required aria-label="Feedback text"></textarea>
+
+        <label for="rating">Rating:</label>
+        <select id="rating" aria-label="Feedback rating">
+          <option value="5">😊 Excellent</option>
+          <option value="4">🙂 Good</option>
+          <option value="3">😐 Average</option>
+          <option value="2">🙁 Poor</option>
+          <option value="1">😡 Very Poor</option>
+        </select>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- Display Feedback -->
+    <section class="display-section">
+      <h2>Submitted Feedback</h2>
+      <ul id="feedbackList" aria-live="polite"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
